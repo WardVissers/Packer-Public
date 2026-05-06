@@ -1,0 +1,1 @@
+﻿Get-WindowsImage -ImagePath "d:\temp3\install.wim" -Index:1

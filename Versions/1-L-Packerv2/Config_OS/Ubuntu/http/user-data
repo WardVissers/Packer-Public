@@ -1,0 +1,37 @@
+#cloud-config
+autoinstall:
+  version: 1
+
+  # Locale and keyboard
+  locale: en_US.UTF-8
+  keyboard:
+    layout: us
+    variant: ""
+
+  # Identity (user + hostname)
+  identity:
+    hostname: ubuntu-packer
+    username: ubuntu
+    # openssl passwd -6 ThisisagoodPassword!
+    password: $6$tF/4ZG4M2n5lJ5LY$bV4FopLcSS9M5L.RXaOvFx12yWhJZDPW3rXfSL8Wt0wMj1v.XT20skGnd7Bb3/EwPd4mJIcMlk5FnUSjk03S80   # SHA-512 hash
+
+  # Storage (example: LVM layout)
+  storage:
+    layout:
+      name: lvm
+
+  # SSH setup
+  ssh:
+    install-server: true
+ 
+  # Packages
+  packages:
+    - open-vm-tools
+    - wget
+    - curl
+    - vim
+
+
+
+
+

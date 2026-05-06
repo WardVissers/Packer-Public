@@ -1,0 +1,1 @@
+Powershell.exe -executionpolicy bypass -file c:\temp\postinstall-pck.ps1
